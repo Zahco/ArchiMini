@@ -1,0 +1,17 @@
+<svg viewBox="0 0 100 50">
+  <style>
+    circle {
+      fill: white;
+      stroke: green;
+      stroke-width: 5px;
+    }
+  </style>
+
+  <g>
+    <circle cx="25" cy="25" r="15" />
+    <circle cx="40" cy="25" r="15" />
+    <circle cx="55" cy="25" r="15" />
+    <circle cx="70" cy="25" r="15" />
+  </g>
+</svg>
+

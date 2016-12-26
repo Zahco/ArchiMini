@@ -1,0 +1,89 @@
+<svg viewBox="0 0 170 180">
+  <style>
+    circle {
+      fill: white;
+      stroke: green;
+      stroke-width: 5px;
+    }
+    rect {
+      fill: white;
+      stroke: black;
+      stroke-width: 2px;
+    }    
+    .bl {
+      stroke: blue;
+      stroke-width: 3px;
+    }    
+  </style>
+  <g transform="translate(-26.361702,-26.787231)">
+    <rect
+       y="27.287231"
+       x="26.861702"
+       height="64.095741"
+       width="110.6383"/>
+    <g
+       transform="translate(41.702128,42.765957)"
+       id="g6">
+      <circle
+         id="circle8"
+         r="15"
+         cy="25"
+         cx="25" />
+      <circle
+         id="circle10"
+         r="15"
+         cy="25"
+         cx="40" />
+      <circle
+         id="circle12"
+         r="15"
+         cy="25"
+         cx="55" />
+      <circle
+         id="circle14"
+         r="15"
+         cy="25"
+         cx="70" />
+    </g>
+    <text y="43.244678" x="34.30851">Groupe 1</text>
+  </g>
+  <g
+     id="g3393"
+     transform="translate(26.617021,84.382982)">
+    <g
+       id="g4213">
+      <rect
+         y="27.287231"
+         x="26.861702"
+         height="64.095741"
+         width="110.6383"
+         id="rect3395" />
+      <g
+         transform="translate(41.702128,42.765957)"
+         id="g3397">
+        <circle
+           id="circle3399"
+           r="15"
+           cy="25"
+           cx="25" />
+        <circle
+           id="circle3401"
+           r="15"
+           cy="25"
+           cx="40" />
+        <circle
+           id="circle3403"
+           r="15"
+           cy="25"
+           cx="55" />
+        <circle
+           id="circle3405"
+           r="15"
+           cy="25"
+           cx="70" />
+      </g>
+      <text y="43.244678" x="34.30851">Groupe 2</text>
+    </g>
+  </g>
+  <line x1="50.234042" y1="65.127661" x2="103.69149" y2="111.67021" class="bl"/>
+</svg>
