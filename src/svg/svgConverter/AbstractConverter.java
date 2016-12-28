@@ -1,6 +1,5 @@
 package svg.svgConverter;
 
-import org.apache.batik.transcoder.Transcoder;
 
 abstract class AbstractConverter implements IConverter {
 	private String inputFilename;
