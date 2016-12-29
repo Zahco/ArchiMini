@@ -74,6 +74,11 @@ public class Editor {
 	private ISvgAction currentMode;
 	private List<ActionButton> actionButtons;
 	
+	private String[] eventsToCatch = {
+		SVGConstants.SVG_MOUSEUP_EVENT_TYPE,
+		SVGConstants.SVG_MOUSEDOWN_EVENT_TYPE,
+	};
+	
 	// CONSTRUCTEUR
 	public Editor() {
 		createModel();
@@ -129,6 +134,7 @@ public class Editor {
 		}
 		mainFrame.add(center, BorderLayout.CENTER);
 	}
+	
 	// https://xmlgraphics.apache.org/batik/using/swing.html
 	private void createController() {
 		CurrentState.getInstance().setSvgCanvas(svgCanvas);
@@ -187,11 +193,15 @@ public class Editor {
             public void gvtRenderingCompleted(GVTTreeRendererEvent e) {
             	loadStatus.setText("");
             	EventTarget root = (EventTarget)svgCanvas.getSVGDocument().getRootElement();
-        		root.addEventListener(SVGConstants.SVG_MOUSEUP_EVENT_TYPE, new EventListener() {
-        			public void handleEvent(Event evt) {
-        				currentMode.run(SVGConstants.SVG_MOUSEUP_EVENT_TYPE, evt);
-        			}
-        		}, false);
+            	for (String eventType : eventsToCatch) {
+            		final String eventTypeFinal = eventType;
+            		root.addEventListener(eventTypeFinal, new EventListener() {
+            			public void handleEvent(Event evt) {
+            				final Event event = evt;
+            				currentMode.run(eventTypeFinal, event);
+            			}
+            		}, false);
+            	}
             }
         });
 	}

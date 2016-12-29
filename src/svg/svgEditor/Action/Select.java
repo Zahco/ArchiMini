@@ -8,7 +8,7 @@ import svg.svgEditor.CurrentState;
 
 public class Select extends AbstractAction {
 	
-	protected void onClick(Event evt) {
+	protected void onMouseUp(Event evt) {
 		CurrentState.getInstance().setSelectedNode((Element)evt.getTarget());
 	}
 	

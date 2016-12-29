@@ -7,7 +7,10 @@ public abstract class AbstractAction implements ISvgAction {
 	public void run(String eventType, Event evt) {
 		switch(eventType) {
 		case SVGConstants.SVG_MOUSEUP_EVENT_TYPE:
-			onClick(evt);
+			onMouseUp(evt);
+		break;
+		case SVGConstants.SVG_MOUSEDOWN_EVENT_TYPE:
+			onMouseDown(evt);
 		break;
 		default:
 		break;
@@ -15,5 +18,6 @@ public abstract class AbstractAction implements ISvgAction {
 		
 	}
 	
-	protected void onClick(Event evt) {}
+	protected void onMouseUp(Event evt) {}
+	protected void onMouseDown(Event evt) {}
 }
